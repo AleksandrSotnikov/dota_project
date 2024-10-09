@@ -1,0 +1,52 @@
+.general {
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    border-radius: 2px;
+    position: 50% 50% 0px;
+    animation-name: myanim;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+
+.general:hover {
+    background-color: blue;
+    /* при наведении ставим цвет заливки синий*/
+}
+
+@keyframes 'myanim' {
+    0% {
+        opacity: 0;
+        position: 50% 0% 0px;
+    }
+    100% {
+        opacity: 1;
+        position: 50% 50% 0px;
+    }
+}
+
+.button {
+    height: 50px;
+    /* высота*/
+    width: 50px;
+    /* ширина*/
+    background-color: aqua;
+    /* фон цвета aqua*/
+    position: 0 0 0;
+    /* делаем кнопку по середине*/
+    border-radius: 5px;
+    /*скругляем края*/
+}
+
+.button:hover {
+    box-shadow: 0 0 5px aqua;
+    /* делаем свечение по краям при наведении*/
+}
+
+.button:active {
+    box-shadow: 0 0 5px green;
+    /* делаем свечение по краям при нажатии*/
+    background-color: green;
+    /*меняем цвет при нажатии*/
+}

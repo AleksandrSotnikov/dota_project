@@ -1,0 +1,23 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/generalPanel.css" />
+        <include src="file://{resources}/styles/custom_game/wave_display.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/generalPanel.js" /> 
+        <include src="file://{resources}/scripts/custom_game/wave_display.js" />
+    </scripts>
+    <!--<snippets>-->
+
+    
+    <!--</snippets>-->
+    <Panel>
+        <Panel id="general" class="general">
+            <Button id="button" class="button" onactivate="buttonPressed()">
+            </Button>
+        </Panel>
+        <Panel id="WaveDisplay" class="WaveDisplay">
+            <Label id="WaveLabel" class="WaveLabel" text="Wave: 1" />
+        </Panel> 
+    </Panel>
+</root>

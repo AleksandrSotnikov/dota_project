@@ -1,0 +1,96 @@
+"WaveConfig"
+{
+    "Waves"
+    {
+        "1"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "2"
+        {
+            "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "3"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "4"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "5"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "6"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "7"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "8"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "9"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+        "10"
+        {
+           "CreepType1"   "npc_dota_creep_badguys_ranged_upgraded"
+            "CreepCount1"  "6"
+            "CreepHealth"  "150"
+            "CreepType2"   "npc_dota_creep_goodguys_ranged"
+            "CreepDamage"  "20"
+            "CreepCount2"  "3"
+        }
+    }
+}

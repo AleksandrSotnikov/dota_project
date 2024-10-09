@@ -1,0 +1,19 @@
+.WaveDisplay{
+    height: 80px;
+    width: 20%;
+    background-color: #aaffbb6d;
+    border-radius: 3px;
+    border-color: black;
+    position: 10% 30% 0px;   
+}
+
+.WaveDisplay:hover{
+    background-color: #aabeff6d;
+}
+
+.WaveLabel{
+    font-size: 24px;
+    color: whitesmoke;
+    margin: 20px;
+    text-align: center;
+}

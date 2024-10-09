@@ -1,0 +1,13 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/black_cube.css"/>
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/black_cube.js"/>
+    </scripts>
+    <Panel class="AbilitySelectionMenu">
+        <Label id="abilitySelectionMenuHeader" text="TEXT"/>
+        <DOTAAbilityImage id="abilityImage1" abilityname="ursa_fury_swipes" showtooltip="true"/>
+        <DOTAAbilityImage id="abilityImage2" abilityname="ursa_enrage" showtooltip="true"/>
+    </Panel>
+</root>

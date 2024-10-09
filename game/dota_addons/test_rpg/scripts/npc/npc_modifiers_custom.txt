@@ -1,0 +1,15 @@
+"modifier_magical_monometre_charge"
+{
+    "IsHidden"      "1"
+    "IsPurgable"    "0"
+    "Attributes"    "MODIFIER_ATTRIBUTE_PERMANENT"
+
+    "OnAbilityExecuted"
+    {
+        "RunScript"
+        {
+            "ScriptFile"  "items/item_magical_monometre.lua"
+            "Function"    "MagicalMonometre_ChargeUp"
+        }
+    }
+}

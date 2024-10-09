@@ -1,0 +1,118 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+	//=================================================================================================================
+	// Skeleton_king: bility_absorb_power
+	//=================================================================================================================
+	"ability_absorb_power"
+    {
+        "BaseClass"             "ability_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"    "absorb_power"    // Ссылка на пользовательское изображение
+
+		"MaxLevel"				"20"	// лвл способности и на каком лвл ее можно вкачать и через сколько лвл ее прокачивать
+		"RequiredLevel"			"5"
+		"LevelsBetweenUpgrades"	"3"
+        
+		"HasShardUpgrade"		"1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "bonus_per_soul"       "1"  // Количество атрибутов, которое дает каждый заряд
+            }
+            "02"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "max_souls"            "1000"  // Максимальное количество накопленных зарядов (душ)
+			}
+		}
+        "Modifiers"
+        {
+           "modifier_absorb_power"
+            {
+                "Passive" "1"
+                "Attributes" "MODIFIER_ATTRIBUTE_PERMANENT"
+
+                "OnDeath"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"  "abilities/ability_absorb_power.lua"
+                        "Function"    "AbsorbPower_OnDeath"
+                    }
+                }
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_per_soul"
+                    "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_per_soul"
+                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_per_soul"
+                }
+            }
+        }
+    }
+	"ability_summon_ancient_lords"
+	{
+		"BaseClass"                 "ability_lua"
+		"ScriptFile"                "abilities/ability_summon_ancient_lords"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"		"wraith_king_hellfire_blast"
+		"AbilityCooldown"           "60 40 20 10"
+		"AbilityManaCost"           "150 75 50 0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"            "FIELD_INTEGER"
+				"health_multiplier"   "150 150 150 150"   // 150% от здоровья Wraith King
+			}
+			"02"
+			{
+				"var_type"            "FIELD_INTEGER"
+				"skeleton_duration"    "25 25 25 25"   // Длительность существования скелетов
+			}
+			"03"
+			{
+				"var_type"            "FIELD_INTEGER"
+				"skeleton_damage_percent" "70 70 70 70" // 70% от урона Wraith King
+			}
+		}
+
+		"OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"   "Hero_SkeletonKing.Reincarnate"  // Звук при касте
+            }
+            "FireAnimation"
+            {
+                "Activity"     "ACT_DOTA_CAST_ABILITY_4"        // Анимация каста, как при использовании "Bone Guard"
+                "Target"       "CASTER"
+            }
+			"RunScript"
+            {
+                "ScriptFile"  "abilities/ability_summon_ancient_lords"
+                "Function"    "OnSpellStart"
+            }
+        }
+
+		"Modifiers"
+		{
+			"modifier_summon_ancient_lords"
+			{
+				"Passive"               "0"
+				"IsHidden"              "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS"  "%health_multiplier"
+				}
+			}
+		}
+	}
+}

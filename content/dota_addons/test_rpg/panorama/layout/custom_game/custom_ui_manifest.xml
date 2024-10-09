@@ -1,0 +1,8 @@
+
+<root>
+    <Panel>
+        <CustomUIElement type="Hud" file="file://{resources}/layout/custom_game/wave_display.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/general_panel.xml"/>
+       <!-- <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/black_cube.xml" /> -->
+    </Panel>
+</root>

@@ -1,0 +1,21 @@
+.AbilitySelectionMenu {
+    background-color: rgba(54, 150, 163, 0.6);
+    horizontal-align: right;
+    vertical-align: center;
+    border-radius: 30px;
+    width: 162px;
+    height: fit-children;
+    max-height: 85%;
+    margin: 2%;
+    overflow: clip;
+    flow-children: down;
+}
+
+#abilitySelectionMenuHeader {
+    font-size: 23px;
+    margin-top: 8%;
+    margin-left: 3%;
+    margin-right: 3%;
+    color: white;
+    horizontal-align: center;
+}

@@ -1,0 +1,114 @@
+"DOTAAbilities"
+{
+    "item_magical_monometre" {
+        "ID"              "3123"                              // Уникальный ID предмета
+        "BaseClass"       "item_datadriven"
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityCooldown" "90"
+        "AbilityManaCost" "0"
+        "ItemCost"        "3000"
+        "ItemShopTags"    "move_speed;mana_regen"
+        "ItemQuality"     "epic"
+        "ItemAliases"     "magical monometre"
+        "ItemStockMax"    "1"
+        "ItemStockTime"   "120"
+
+        "ItemRequirements"                                  // Условия для создания предмета
+        {
+            "item_arcane_boots"   "1"
+            "item_void_stone"     "1"
+            "item_recipe_magical_monometre" "1"
+        }
+
+        "AbilitySpecial"                                     // Специальные свойства предмета
+        {
+            "01"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "bonus_mana"           "250"
+            }
+            "02"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "mana_regen"           "3"
+            }
+            "03"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "movespeed_bonus"      "40"
+            }
+            "04"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "spell_amplify"        "10"     // 10% к усилению магии
+            }
+            "05"
+            {
+                "var_type"             "FIELD_INTEGER"
+                "restore_radius"       "1200"   // Радиус восстановления маны
+            }
+        }
+
+        // Описание предмета
+        "AbilityTextureName"  "item_magical_monometre"               // Используем иконку Arcane Boots для предмета
+        "ItemAttributes"
+        {
+            "Mana"             "250"                      // Пассивные бонусы предмета (манапул, реген)
+            "Mana Regen"       "3"
+            "Move Speed"       "40"
+            "Spell Amplify"    "10%"
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"  "items/item_magical_monometre.lua"
+                "Function"    "MagicalMonometre_Activate"
+            }
+        }
+
+        "Modifiers"                                          // Пассивный эффект предмета
+        {
+            "modifier_magical_monometre"
+            {
+                "Passive" "1"
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"    "40"
+                    "MODIFIER_PROPERTY_MANA_BONUS"                  "250"
+                    "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"         "3"
+                    "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"    "10"
+                }
+            }
+            "modifier_magical_monometre_charge"              // Модификатор для накопления заряда магии
+            {
+                "Passive" "1"
+                "IsHidden" "1"
+                "OnAbilityExecuted"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"  "items/item_magical_monometre.lua"
+                        "Function"    "MagicalMonometre_ChargeUp"
+                    }
+                }
+            }
+        }
+    }
+    "item_recipe_magical_monometre"{
+        "BaseClass"             "item_datadriven"
+        "Model"                 "models/props_gameplay/recipe.mdi"
+        "AbilityTextureName"    "item_recipe"
+
+        "ItemCost"              "150"
+        "ItemShopTags"            ""
+
+        "ItemRecipe"            "1"
+        "ItemResult"            "item_magical_monometre"
+        "ItemRequirements"
+        {
+            "01"    "item_arcane_boots;item_void_stone;"
+        }
+    }
+} 

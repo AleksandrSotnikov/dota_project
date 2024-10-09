@@ -1,0 +1,39 @@
+// Units File
+"DOTAUnits"
+{
+	"Version"	"1"
+	
+	//=================================================================================	
+	// Creature: Gnoll Assassin
+	//=================================================================================
+	"npc_dota_wraith_king_skeleton_lord"
+{
+    "BaseClass"                 "npc_dota_creep"
+    "Model"                     "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+    "SoundSet"                  "Creep_Good_Melee"
+    "Level"                     "1"
+    "HealthBarOffset"           "160"
+    "BountyXP"                  "31"
+    "BountyGoldMin"             "3"
+    "BountyGoldMax"             "5"
+    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+    "MovementSpeed"             "325"
+    "StatusHealth"              "500"
+    "StatusHealthRegen"         "1"
+    "StatusMana"                "0"
+    "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+    "AttackDamageMin"           "30"
+    "AttackDamageMax"           "40"
+    "AttackRate"                "1.0"
+    "AttackRange"               "128"
+    "AttackAnimationPoint"      "0.56"
+    "ArmorPhysical"             "2"
+    "MagicalResistance"         "25"
+    "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+    "VisionDaytimeRange"        "1400"
+    "VisionNighttimeRange"      "800"
+    "Ability1"                  ""
+}
+}
