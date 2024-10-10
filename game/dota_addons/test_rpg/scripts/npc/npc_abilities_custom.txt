@@ -2,60 +2,10 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
-	
-	//=================================================================================================================
-	// Skeleton_king: bility_absorb_power
-	//=================================================================================================================
-	"ability_absorb_power"
-    {
-        "BaseClass"             "ability_datadriven"
-        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityTextureName"    "absorb_power"    // Ссылка на пользовательское изображение
-
-		"MaxLevel"				"20"	// лвл способности и на каком лвл ее можно вкачать и через сколько лвл ее прокачивать
-		"RequiredLevel"			"5"
-		"LevelsBetweenUpgrades"	"3"
-        
-		"HasShardUpgrade"		"1"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"             "FIELD_INTEGER"
-                "bonus_per_soul"       "1"  // Количество атрибутов, которое дает каждый заряд
-            }
-            "02"
-            {
-                "var_type"             "FIELD_INTEGER"
-                "max_souls"            "1000"  // Максимальное количество накопленных зарядов (душ)
-			}
-		}
-        "Modifiers"
-        {
-           "modifier_absorb_power"
-            {
-                "Passive" "1"
-                "Attributes" "MODIFIER_ATTRIBUTE_PERMANENT"
-
-                "OnDeath"
-                {
-                    "RunScript"
-                    {
-                        "ScriptFile"  "abilities/ability_absorb_power.lua"
-                        "Function"    "AbsorbPower_OnDeath"
-                    }
-                }
-
-                "Properties"
-                {
-                    "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_per_soul"
-                    "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"   "%bonus_per_soul"
-                    "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_per_soul"
-                }
-            }
-        }
-    }
+		
 }
-
+//=================================================================================================================
+// Skeleton_king: bility_absorb_power
+//=================================================================================================================
 #base "../vscripts/lua_abilities/wraith_king/wraith_king_hellfire_blast_lua/wraith_king_hellfire_blast_lua.txt"
+#base "../vscripts/lua_abilities/wraith_king/wraith_king_ability_absorb_power/wraith_king_ability_absorb_power.txt"
