@@ -1,0 +1,67 @@
+"DOTAAbilities"
+{
+    // Ability Technical Aspect
+	// base script folder	: scripts/vscripts
+	// base texture folder	: resource/flash3/images/spellicons
+	//-------------------------------------------------------------------------------------------------------------
+    "wraith_king_hellfire_blast_lua"
+	{
+		"BaseClass"                 "ability_lua"
+		"ScriptFile"                "lua_abilities/wraith_king/wraith_king_hellfire_blast_lua/wraith_king_hellfire_blast_lua"
+		"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"		"wraith_king_hellfire_blast_lua"
+		"AbilityCooldown"           "60 40 20 10"
+		"AbilityManaCost"           "150 75 50 0"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+		"AbilityValues"
+		{
+			"health_multiplier"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"value" "150 200 300 500"   // 150% от здоровья Wraith King
+			}
+			"skeleton_duration"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"value" "25 50 75 100"   // Длительность существования скелетов
+			}
+			"skeleton_damage_percent"
+			{
+				"var_type"  "FIELD_INTEGER"
+				"value"   "70 180 290 400" // 70% от урона Wraith King
+			}
+		}
+
+		"OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"   "Hero_SkeletonKing.Reincarnate"  // Звук при касте
+            }
+            "FireAnimation"
+            {
+                "Activity"     "ACT_DOTA_CAST_ABILITY_4"        // Анимация каста, как при использовании "Bone Guard"
+                "Target"       "CASTER"
+            }
+			"RunScript"
+            {
+                "ScriptFile"  "abilities/ability_summon_ancient_lords"
+                "Function"    "OnSpellStart"
+            }
+        }
+
+		"Modifiers"
+		{
+			"modifier_summon_ancient_lords"
+			{
+				"Passive"               "0"
+				"IsHidden"              "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_BONUS"  "%health_multiplier"
+				}
+			}
+		}
+	}
+}

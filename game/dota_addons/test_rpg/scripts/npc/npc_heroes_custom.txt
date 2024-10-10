@@ -16,7 +16,7 @@
 	{
 		"override_hero"				"npc_dota_hero_skeleton_king"			// Hero to override
 		"Ability1"					"ability_absorb_power"		// Ability 1
-		"Ability2"					"ability_summon_ancient_lords"
+		"Ability2"					"wraith_king_hellfire_blast_lua"
 		"VisionNighttimeRange"		"1800"
 	}
 }
