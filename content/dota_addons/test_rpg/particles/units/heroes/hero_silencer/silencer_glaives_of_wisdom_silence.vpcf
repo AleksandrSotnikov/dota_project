@@ -1,0 +1,53 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf60:version{cd92a366-0b0d-4811-a18d-f6d472d19709} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_silence_ground.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_silence_smoke_body_outline.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_silence_start.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_silence_frost.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_silence_smoke_start.vpcf"
+		},
+	]
+	m_nMaxParticles = 0
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 2
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+			]
+			m_previewState = 
+			{
+				m_previewModel = "models/heroes/axe/axe.vmdl"
+				m_nModSpecificData = 2
+				m_sequenceName = "idle"
+				m_hitboxSetName = "default"
+			}
+		},
+	]
+}

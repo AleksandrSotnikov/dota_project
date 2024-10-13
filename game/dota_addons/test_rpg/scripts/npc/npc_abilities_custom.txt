@@ -9,3 +9,4 @@
 //=================================================================================================================
 #base "../vscripts/lua_abilities/wraith_king/wraith_king_hellfire_blast_lua/wraith_king_hellfire_blast_lua.txt"
 #base "../vscripts/lua_abilities/wraith_king/wraith_king_ability_absorb_power/wraith_king_ability_absorb_power.txt"
+#base "../vscripts/lua_abilities/silencer/silencer_ability_glaives_of_wisdom/silencer_ability_glaives_of_wisdom.txt"

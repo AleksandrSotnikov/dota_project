@@ -6,17 +6,26 @@
 	//=================================================================================================================
 	// HERO: Templar Assassin
 	//=================================================================================================================
-	"npc_dota_hero_templar_assassin_template"
+	"npc_dota_hero_crystal_maiden"
 	{
-		"override_hero"				"npc_dota_hero_templar_assassin"			// Hero to override
-		"Ability1"					"templar_assassin_refraction_holdout"		// Ability 1
+		"override_hero"				"npc_dota_hero_crystal_maiden"			// Hero to override
+		"Ability1"					""		// Ability 1
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
-	"npc_dota_hero_skeleton_king_template"
+	"npc_dota_hero_skeleton_king"
 	{
 		"override_hero"				"npc_dota_hero_skeleton_king"			// Hero to override
-		"Ability1"					"ability_absorb_power"		// Ability 1
+		"Ability1"					"wraith_king_ability_absorb_power"		// Ability 1
 		"Ability2"					"wraith_king_hellfire_blast_lua"
 		"VisionNighttimeRange"		"1800"
+	}
+	"npc_dota_hero_silencer"
+	{
+		"override_hero"				"npc_dota_hero_silencer"			// Hero to override
+		"Ability1"					""
+		"Ability2"					"silencer_ability_glaives_of_wisdom"		// Ability 1
+		"Ability3"					""
+		"Ability4"					""
+		"VisionNighttimeRange"		"1800"	
 	}
 }

@@ -1,15 +1,18 @@
-"wraith_king_hellfire_blast"
+"DOTAAbilities"
 {
-    "BaseClass"             "ability_lua"
-    "ScriptFile"            "lua_abilities/wraith_king/wraith_king_ability_absorb_power/wraith_king_ability_absorb_power"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-    "AbilityTextureName"    "absorb_power"
-    "AbilityValues"
+    "wraith_king_ability_absorb_power"
     {
-        "bonus_per_soul"    "0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0"
-        "max_souls"         "200"
+        "BaseClass"             "ability_lua"
+        "ScriptFile"            "lua_abilities/wraith_king/wraith_king_ability_absorb_power/wraith_king_ability_absorb_power"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"    "wraith_king_absorb_power"
+        "AbilityValues"
+        {
+            "bonus_per_soul"    "0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2.0"
+            "creeps_to_kill"     "4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 2"
+        }
+        "MaxLevel"				"20"	// лвл способности и на каком лвл ее можно вкачать и через сколько лвл ее прокачивать
+        "RequiredLevel"			"1"
+        "LevelsBetweenUpgrades"	"3"
     }
-    "MaxLevel"				"20"	// лвл способности и на каком лвл ее можно вкачать и через сколько лвл ее прокачивать
-	"RequiredLevel"			"1"
-	"LevelsBetweenUpgrades"	"3"
 }

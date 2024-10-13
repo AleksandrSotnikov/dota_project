@@ -1,0 +1,49 @@
+"DOTAAbilities"
+{
+    "silencer_ability_glaives_of_wisdom"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "ScriptFile"                    "lua_abilities/silencer/silencer_ability_glaives_of_wisdom/silencer_ability_glaives_of_wisdom"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "AbilityTextureName"            "silencer_ability_glaives_of_wisdom"
+        "MaxLevel"                      "20"
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"     ""              
+        }
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDuration"               "0.0 0.0 0.0 0.0"
+        "AbilityCastRange"              "600"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "15 25 35 50"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "intellect_damage_pct"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "value"                 "25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 105 110 115 120"
+            }
+            "steal_range"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "value"                 "925"
+            }
+        }       
+    }
+}

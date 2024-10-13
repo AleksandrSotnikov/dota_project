@@ -5,5 +5,7 @@
 
 "CustomHeroList"
 {
-	"npc_dota_hero_skeleton_king" "1"
+	"npc_dota_hero_skeleton_king" 	"1"
+	"npc_dota_hero_crystal_maiden" 	"1"
+	"npc_dota_hero_silencer"		"1"
 }
