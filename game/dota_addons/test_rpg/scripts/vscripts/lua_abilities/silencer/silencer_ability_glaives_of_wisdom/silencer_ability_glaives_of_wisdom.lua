@@ -1,36 +1,18 @@
-silencer_ability_glaives_of_wisdom = class({})
+custom_glaives_of_wisdom = class({})
+LinkLuaModifier("modifier_custom_glaives_of_wisdom", "lua_abilities/silencer/silencer_ability_glaives_of_wisdom/modifier_custom_glaives_of_wisdom", LUA_MODIFIER_MOTION_NONE)
 
-function silencer_ability_glaives_of_wisdom:OnCreated()
-
+-- Функция при активации способности
+function custom_glaives_of_wisdom:GetIntrinsicModifierName()
+    return "modifier_custom_glaives_of_wisdom"
 end
 
-function silencer_ability_glaives_of_wisdom:IntToDamage( keys )
+-- Когда способность включается или выключается
+function custom_glaives_of_wisdom:OnToggle()
+    local caster = self:GetCaster()
 
-    local ability = keys.ability
-    local caster = keys.caster
-    local target = keys.target
-    local int_caster = caster:GetIntellect()
-    local int_damage = ability:GetLevelSpecialValueFor("intellect_damage_pct", (ability:GetLevel() -1)) 
-    
-
-    local damage_table = {}
-
-    damage_table.attacker = caster
-    damage_table.damage_type = ability:GetAbilityDamageType()
-    damage_table.ability = ability
-    damage_table.victim = target
-
-    damage_table.damage = int_caster * int_damage / 100
-
-    ApplyDamage(damage_table)
-
+    if self:GetToggleState() then
+        caster:EmitSound("Hero_Silencer.GlaivesOfWisdom.ToggleOn")
+    else
+        caster:EmitSound("Hero_Silencer.GlaivesOfWisdom.ToggleOff")
+    end
 end
-
-modifier_custom_attack = class({})
-
-function modifier_custom_attack:GetModifierProjectileName()
-    return "particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom.vpcf"
-end
-
-function modifier_custom_attack:IsPurgable()    return false end
-function modifier_custom_attack:IsHidden()      return false end

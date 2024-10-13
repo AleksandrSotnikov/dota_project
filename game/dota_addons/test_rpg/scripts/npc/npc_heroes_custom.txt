@@ -23,7 +23,7 @@
 	{
 		"override_hero"				"npc_dota_hero_silencer"			// Hero to override
 		"Ability1"					""
-		"Ability2"					"silencer_ability_glaives_of_wisdom"		// Ability 1
+		"Ability2"					"custom_glaives_of_wisdom"		// Ability 1
 		"Ability3"					""
 		"Ability4"					""
 		"VisionNighttimeRange"		"1800"	
